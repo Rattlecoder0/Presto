@@ -1,0 +1,57 @@
+
+    <div class="formcont">
+        <form class="itsform" [formGroup]="registerForm" (ngSubmit)="signUp()">
+        <p class="hedtxt">Signup</p>
+
+        <div class="f-l-nm mm">
+
+            <div class="f-name">
+        <input class="fl" type="text" placeholder="First Name" ngModel formControlName="firstname">
+        <span class="err" *ngIf="FirstName.errors?.['required'] && (FirstName.touched || FirstName.dirty)">*First name is required</span>
+        <span class="err"  *ngIf="FirstName.errors?.['minlength'] && (FirstName.touched || FirstName.dirty)">*First name is too short</span>
+        <span class="err"  *ngIf="FirstName.errors?.['pattern'] && (FirstName.touched || FirstName.dirty)">*Name should start with a Alphabet</span>
+    </div>
+
+        <div class="l-name">
+        <input class="fl" type="text" placeholder="Last Name" formControlName="lastname">
+        <span class="err" *ngIf="LastName.errors?.['required'] && (LastName.touched || LastName.dirty)">*Last name is required</span>
+        <span class="err"  *ngIf="LastName.errors?.['minlength'] && (LastName.touched || LastName.dirty)">*First name is too short</span>
+        <span class="err"  *ngIf="LastName.errors?.['pattern'] && (LastName.touched || LastName.dirty)">*Name should start with a Alphabet</span>
+    </div>
+
+    </div>
+
+    <div class="mobile mm">
+        <input class="uu" id="num" type="text" placeholder="Mobile Number" formControlName="mobile">
+        <span class="err" *ngIf="Mobile.errors?.['required'] && (Mobile.touched || Mobile.dirty)">*Mobile number is required</span>
+        <span class="err" *ngIf="Mobile.errors?.['pattern'] && (Mobile.touched || Mobile.dirty)">*Please enter valid number</span>
+        <span class="err" *ngIf="Mobile.errors?.['maxlength'] && (Mobile.touched || Mobile.dirty)">*Number is not valid</span>
+        <span class="err" *ngIf="Mobile.errors?.['minlength'] && (Mobile.touched || Mobile.dirty)">*Number is short</span>
+    </div>
+
+    <div class="e-mail mm">
+        <input class="uu" id="emm" type="email" placeholder="Email" formControlName="email">
+        <span class="err" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">*Email is required</span>
+        <span class="err" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">*Email is invalid</span>
+    </div>
+
+    <div class="pass-w mm">
+        <input class="uu" id="pss" type="password" placeholder="Password" formControlName="password">
+        <span class="err" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">*Enter a password</span>
+        <span class="err" *ngIf="Password.errors?.['minlength'] && (Password.touched || Password.dirty)">*Password length should be more than 4 charachters</span>
+        <span class="err" *ngIf="Password.errors?.['maxlength'] && (Password.touched || Password.dirty)">*Password is too long</span>
+    </div>
+
+    <div class="mm">
+        <input class="uu" id="c-pss" type="password" placeholder="Confirm Password" formControlName="confirmpassword">
+        <span class="err" [ngStyle]="{'display': confirmpass}">*Password does not match</span>
+    </div>
+
+        <button [disabled]="registerForm.invalid" class="signup">SIGN UP</button>
+         
+    
+        <div class="log-in">
+            <p class="l-in">Already have an account? <a routerLink="/login">Login</a></p>
+        </div>
+    </form>
+    </div>

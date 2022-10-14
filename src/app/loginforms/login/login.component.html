@@ -1,0 +1,33 @@
+
+    <div class="formcont" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value.firstname)">
+        <form class="itsform">
+        <p class="hedtxt">Login</p>
+
+        <div class="email">
+        <input class="uu" id="username" type="text" ngModel placeholder="Username" formControlName="firstname">
+        <span class="err"  *ngIf="loginForm.controls['firstname'].dirty && loginForm.hasError('required','firstname')">*Please enter your name</span>
+    </div>
+
+    <div class="passs">
+        <input class="uu" id="password" type="password" placeholder="Password" formControlName="password">
+        <span class="err"  *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password required</span>
+    </div>
+
+        <button [disabled]="!loginForm.valid " class="signin" type="submit">LOGIN</button>
+
+        <div class="rm-fp-cont">
+        <div class="rm">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="checkbox">Remember Me</label>
+        </div>
+        <div class="fpcont">
+            <a href="#" class="fp">Forgot Password?</a>
+        </div>
+    </div>
+  
+    
+        <div class="sign-up">
+            <p class="s-up">Don't have an account? <a routerLink="/signup">Signup</a></p>
+        </div>
+    </form>
+    </div>

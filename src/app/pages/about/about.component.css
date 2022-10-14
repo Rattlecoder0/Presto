@@ -1,0 +1,19 @@
+.about{
+    display: flex;
+    justify-content: center;
+}
+.abt-cont{
+    width: 70%;
+    padding-top: 10vh;
+}
+.in-content{
+    margin-bottom: 30vh;
+}
+
+.hed-txt{
+    text-align: center;
+}
+
+.para1{
+    margin-top: 5vh;
+}

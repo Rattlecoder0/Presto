@@ -1,0 +1,102 @@
+<section class="MENU">
+    <div class="nonveg-cont">
+
+      <div class="head">
+        <div class="head-txt">
+        <h1>NON-VEG PIZZAS</h1>
+    </div>
+    
+    <div class="sizes">
+        <table>
+            <tr class="nv-red">
+                <th>MONSTER SLICE</th>
+                <th>9" ROUND</th>
+                <th>9" CHEESE BLAST</th>
+                <th>14" ROUND</th>
+            </tr>
+            <tr class="nv-serves">
+                <td>SERVES 1</td>
+                <td>SERVES 2</td>
+                <td>SERVES 3</td>
+                <td>SERVES 4</td>
+            </tr>
+        </table>
+        </div>
+    </div>  
+
+    <div class="lists">
+        <div class="l-1"  *ngFor="let fd of foodData">
+           <div class="p-info">
+           <a [routerLink]="['/order',fd.id]"><h5>{{fd.foodName}}</h5>
+            <p>({{fd.foodDetails}})</p></a>
+        </div>
+
+        <div class="prices-row">
+        <table>
+            <tr>
+                <th>{{fd.s1}}</th>
+                <th>{{fd.s2}}</th>
+                <th>{{fd.s3}}</th>
+                <th>{{fd.s4}}</th>
+            </tr>
+        </table>
+         </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+   <section class="onlyveg">
+    <div class="nonveg-cont">
+
+    <div class="head">
+        <div class="head-txt">
+        <h1 class="vegpiz">VEG PIZZAS</h1>
+    </div>
+    
+    <div class="sizes">
+        <table>
+            <tr class="v-green">
+                <th>MONSTER SLICE</th>
+                <th>9" ROUND</th>
+                <th>9" CHEESE BLAST</th>
+                <th>14" ROUND</th>
+            </tr>
+            <tr>
+                <td>SERVES 1</td>
+                <td>SERVES 2</td>
+                <td>SERVES 3</td>
+                <td>SERVES 4</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="lists">
+        <div class="l-1 l-2"  *ngFor="let fd of foodData2">
+           <div class="p-info">
+           <a [routerLink]="['/opveg',fd.id]"><h5>{{fd.foodName}}</h5>
+            <p>({{fd.foodDetails}})</p></a>
+        </div>
+
+        <div class="prices-row">
+        <table>
+            <tr>
+                <th>{{fd.s1}}</th>
+                <th>{{fd.s2}}</th>
+                <th>{{fd.s3}}</th>
+                <th>{{fd.s4}}</th>
+            </tr>
+        </table>
+         </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+
+
+
+

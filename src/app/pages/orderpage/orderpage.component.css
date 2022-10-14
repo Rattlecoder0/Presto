@@ -1,0 +1,188 @@
+.orderpage{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20vh;
+    margin-top: 8vh;
+}
+.order-cont{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    position: relative;
+    width: 60%;
+}
+.box-cont{
+    width: 100%;
+    border: 2px solid;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.image img{
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.detail{
+    margin-left: 1%;
+    margin-top: 2%;
+}
+.detail h1{
+    margin-bottom: 0;
+}
+.detail h5 span{
+    color: red;
+    margin-left: 2%;
+}
+
+
+.size{
+    margin-top: 6vh;
+    position: relative;
+}
+.size h1{
+    font-size: 25px;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+.ss-sideline{
+    position: absolute;
+    display: block;
+    background-color: rgb(19, 16, 16);
+    height: 2px;
+    width: 30%;
+    top: 15px;
+    left: 90px;
+}
+.ss-sideline2{
+    position: absolute;
+    display: block;
+    background-color: rgb(19, 16, 16);
+    height: 2px;
+    width: 30%;
+    top: 15px;
+    right: 90px;
+}
+.sizes-cont{
+    display: flex;
+    justify-content: center;
+}
+.s{
+    margin-right: 20px;
+}
+.radio{
+    margin-right: 5px;
+}
+
+
+.form-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-bottom: 5vh;
+}
+
+.ff{
+    display: flex;
+    flex-direction: column;
+}
+.ff input{
+    border: none;
+    outline: 2px solid rgb(28, 27, 27);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    width: 100%;
+}
+.ff label{
+    font-size: 14px;
+}
+
+.butt{
+    padding: 10px 0;
+    margin-top: 2vh;
+    transition: .3s;
+    border: none;
+}
+.butt:hover{
+    background-color: red;
+}
+
+@media(max-width: 1650px){
+    .detail h1{
+        font-size: 2.5vw;
+    }
+    .detail p{
+        font-size: 1.1vw;
+    }
+    .detail h5{
+        font-size: 1.4vw;
+    }
+    form{
+        width: 100%;
+    }
+}
+@media(max-width: 992px){
+    .box{
+        width: 100%;
+    }
+    .detail h1{
+        font-size: 3vw;
+    }
+    .detail p{
+        font-size: 1.5vw;
+    }
+    .detail h5{
+        font-size: 1.9vw;
+    }
+}
+@media(max-width: 780px){
+    .sizes-cont{
+    flex-direction: column;
+    }
+    .s{
+        margin-bottom: 10px;
+    }
+}
+@media(max-width:600px){
+    .detail h1{
+        font-size: 5vw;
+    }
+    .detail p{
+        font-size: 2.2vw;
+    }
+    .detail h5{
+        font-size: 2.8vw;
+    }
+}
+@media(max-width:420px){
+    .order-cont{
+        width: 95%;
+    }
+    .detail h1{
+        font-size: 6vw;
+    }
+    .detail p{
+        font-size: 3.2vw;
+    }
+    .detail h5{
+        font-size: 5vw;
+    }
+    .ff label{
+        font-size: 17px;
+    }
+    .s label{
+        font-size: 17px;
+    }
+}

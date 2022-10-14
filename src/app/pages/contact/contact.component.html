@@ -1,0 +1,49 @@
+<section class="contact">
+    <div class="con-cont">
+
+
+       <form class="form" action="https://formspree.io/f/mbjbygjk" method="POST" [formGroup]="contactForm" >
+            <h1 class="hed-txt">Contact</h1>
+
+                <div class="r">
+                <div class="name fg">
+                    <input type="text" name="name" formControlName="fullname" class="f-input" placeholder=" ">
+                    <div class="underline"></div>
+                    <label class="f-label" for="">Full Name</label>
+                </div>
+                <span *ngIf="contactForm.controls['fullname'].dirty && contactForm.hasError('required','fullname')">*Enter your name</span>
+            </div>
+
+            <div class="r">
+                <div class="email fg">
+                    <input type="email" class="f-input" name="email" formControlName="email" placeholder=" ">
+                    <div class="underline"></div>
+                    <label class="f-label" for="">Email</label>
+                </div>
+                <span *ngIf="contactForm.controls['email'].dirty && contactForm.hasError('required','email')">*Enter valid email address</span>
+            </div>
+
+            <div class="r">
+                <div class="number fg">
+                    <input type="number" class="f-input" name="phone" formControlName="number" placeholder=" ">
+                    <div class="underline"></div>
+                    <label class="f-label" for="">Mobile Number</label>
+                </div>
+                <span *ngIf="contactForm.controls['number'].dirty && contactForm.hasError('required','number')">*Enter your number</span>
+            </div>
+
+            <div class="r">
+                <div class="issue fg">  
+                    <textarea name="message" class="txtarea" formControlName="issue" rows="5" placeholder=" "></textarea>
+                    <div class="area-line"></div>
+                    <label class="f-label" for="">Describe your issue here</label>
+                </div>
+                <span *ngIf="contactForm.controls['issue'].dirty && contactForm.hasError('required','issue')">*Message cannot be empty</span>
+            </div>
+         
+            <button class="btn butt" type="submit" [disabled]="!contactForm.valid" value="submit">SUBMIT</button>
+        </form>
+
+
+    </div>
+</section>

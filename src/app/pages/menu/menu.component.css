@@ -1,0 +1,122 @@
+.MENU{
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+    margin-top: 5vh;
+}
+.onlyveg{
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+}
+.nonveg-cont{
+    width: 90%;
+}
+
+.head{
+    border: 1px solid ;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    height: 70px;
+}
+
+.head-txt{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translate(0,-37%);
+}
+.head-txt h1{
+    font-size: 24px;
+    color: red;
+}
+
+.sizes{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+}
+table{
+    text-align: center;
+}
+table tr th{
+    width: 9vw;
+    font-size: 16px;
+}
+table tr td{
+    font-size: 15px;
+}
+.nv-red th{
+    color: red;
+}
+
+
+/* ------Lists--------- */
+.lists{
+    position: relative;
+}
+.l-1{
+    position: relative;
+    border-bottom: 1px solid red;
+    height: 60px;
+}
+.p-info{
+    
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translate(0,-30%);
+}
+.p-info a{
+    text-decoration: none;
+    display: flex;
+    color: black;
+}
+.p-info a p{
+    font-size: 14px;
+    transform: translateX(10px) translateY(2px);
+}
+
+.prices-row{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+}
+
+.vegpiz{
+    color: green !important;
+}
+.l-2{
+    border-bottom-color: green;
+}
+.v-green th{
+    color: green;
+}
+
+@media(max-width:1380px){
+    .MENU,.onlyveg{
+        height: 100vh;
+    }
+    .p-info{ 
+        top: 50%;
+        left: 1%;
+        transform: translate(0,-38%);
+    }
+    .p-info a{
+        flex-direction: column;
+    }
+    .p-info a p{
+        transform: none;
+    }
+    .l-1{
+        height: 70px;
+    }
+}
+@media(max-width:1080px){
+   
+
+}

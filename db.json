@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "firstname": "ubaid",
+      "lastname": "murudkar",
+      "email": "sm@gmail.com",
+      "password": "1234",
+      "mobile": 5461356,
+      "id": 2
+    },
+    {
+      "firstname": "Arfat",
+      "lastname": "Sawant",
+      "mobile": "1232152425",
+      "email": "arfat@gmail.com",
+      "password": "1234",
+      "confirmpassword": "1234",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

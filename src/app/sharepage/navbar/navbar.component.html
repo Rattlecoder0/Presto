@@ -1,0 +1,71 @@
+<section class="whole-nav">
+
+    <div class="nav-first">
+        <div class="nf-cont">
+        <div class="nf-info">
+            <div class="in-info">
+                <p><i class="fas fa-mobile-android-alt phn"></i>
+            CALL US: +381 65 666 666</p>
+        </div>
+            <div class="in-text">
+            <p class="addrs"><i class="fa-solid fa-location-dot fal"></i>71 Madison Ave</p>
+        </div>
+        </div>
+    
+
+            <div class="socials">
+                <a href=""><i class="fa-brands fa-instagram fai"></i></a>
+                <a href=""><i class="fa-brands fa-facebook faf"></i></a>
+                <a href=""><i class="fa-brands fa-twitter fat"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------Main Navbar------------- -->
+
+    <div class="navbr">
+        <div class="nav-cont">
+
+        <div class="nav-logo-bar">
+            <i class="fas fa-bars bars" (click)="showbar()"></i>
+            <a routerLink="/"><img src="assets/images/presto_trans2.png" class="logo"></a>
+        <nav>
+            <ul id="ul">
+                <i class="fas fa-times times" (click)="hidebar()"></i>
+                <li><i class="fas fa-home nb"></i><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+                <li><i class="fas fa-caret-down nb"></i><a routerLink="menu" routerLinkActive="active-link">Menu</a></li>
+                <li><i class="fas fa-address-card nb"></i><a routerLink="about" routerLinkActive="active-link">About</a></li>
+                <li><i class="fas fa-shopping-bag nb"></i><a routerLink="shop" routerLinkActive="active-link">Shop</a></li>
+                <li><i class="fas fa-blog nb"></i><a routerLink="blog" routerLinkActive="active-link">Blog</a></li>
+                <li><i class="fas fa-phone-alt nb"></i><a routerLink="contact" routerLinkActive="active-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div> 
+
+    <div class="call-user-cont">
+        <div class="callnorder">
+            <img src="assets/images/food-delivery.png">
+            <div>
+            <p>Call and Order in</p>
+            <h3>+1718-904-4450</h3>
+        </div>
+        </div>
+
+        <div class="user">   
+            <div class="user-cont">
+                <span class="userr-logged">{{n}}</span>
+               <!-- <span class="LG">Login</span> -->
+          
+               <a routerLink="/login" title="login"><i class="fas fa-user"></i></a>
+ 
+    </div>
+</div> 
+
+
+</div>
+        
+    </div>
+</div>
+
+
+ </section>

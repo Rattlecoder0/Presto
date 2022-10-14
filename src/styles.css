@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ------Google Fonts------ */
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Carme&family=Dancing+Script:wght@600&family=Kanit:wght@200&family=Koulen&family=Lexend&family=Lexend+Deca:wght@200&family=Poppins:ital,wght@0,300;0,400;1,400&family=Questrial&family=Rubik:wght@300&family=Secular+One&family=Viga&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    font-family: 'lexend', sans-serif;
+}
+
+:root{
+    --primary-color: rgb(255, 223, 12);
+    --secondary-color: rgb(0, 199, 0);
+}
+
+::selection{
+    background-color: black;
+    color: var(--primary-color);
+}

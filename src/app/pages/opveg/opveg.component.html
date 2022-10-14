@@ -1,0 +1,57 @@
+<section class="orderpage">
+    <div class="order-cont">
+
+        <div class="box" *ngIf="vmenuData">
+            <div class="box-cont">
+
+            <div class="image">
+                <img src="{{vmenuData[0].foodImg}}">
+            </div>
+
+            <div class="detail">
+                <h1>{{vmenuData[0].foodName}}</h1>
+                <p>{{vmenuData[0].foodDetails}}</p>
+                <h5>{{vmenuData[0].s1 | currency : 'INR'}} <span>Serves1</span></h5>
+            </div>
+
+            <div class="size">
+                <span class="ss-sideline"></span><h1>Select Size</h1><span class="ss-sideline2"></span>
+            <div class="sizes-cont">
+            <div class="s1 s">
+                <input type="radio" name="serve1" class="radio"><label for="serve1">Monster Slice</label>
+            </div>
+            <div class="s2 s">
+                <input type="radio" name="serve1" class="radio"><label for="serve1">9" Round</label>
+            </div>
+            <div class="s3 s">
+                <input type="radio" name="serve1" class="radio"><label for="serve1">9" Blast</label>
+            </div>
+            <div class="s4 s">
+                <input type="radio" name="serve1" class="radio"><label for="serve1">14" Round</label>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="form-cont">
+        <form>
+                <div class="nn ff">
+                <label for="name">Enter Your Name</label>
+            <input type="text" name="name">
+        </div>
+        <div class="mob ff">
+            <label for="mob">Mobile Number</label>
+            <input type="number" name="mob">
+        </div>
+
+        <button class="btn btn-dark butt">ORDER</button>
+
+    </form>
+</div>
+  
+</div>
+</div>
+
+
+    </div>
+</section>

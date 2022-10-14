@@ -1,0 +1,76 @@
+<section class="home">
+    <div class="h-cont">
+        <div class="home-txt">
+            <div class="txt-cont">
+                <p>Best Place To <br> Satisfy Your Tummy...</p>
+                <h1>UNLIMITED MEDIUM <span>PIZZAS</span></h1>
+                <h4>Medium 2 Topping* Pizza</h4>
+                <div class="but">
+                    <button class="order-now">ORDER NOW</button>
+                    <h5>$10.99 <sup><del>$12.99</del></sup></h5>
+                </div>
+            </div>
+            <div class="but2">
+                <a routerLink="menu"><button class="menu">MENUS</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- -----Pizza cards------ -->
+
+<section class="foodcards">
+    <div class="all-cont">
+
+        <div class="title">
+        <img src="assets/images/Pizzapics/nonveglogo.png" class="nonveglogo">
+    </div>
+        <span class="hr1"></span>
+    
+    
+    <div class="gridbox">
+        <div class="column"  *ngFor="let fd of NvFoodData, index as i">
+        <div class="c1" *ngIf="i<4">
+            <div class="img-cont">
+                <img src="{{fd.foodImg}}">
+            </div>
+            <div class="text">
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodDetails}}</p>
+                <h4>{{fd.foodPrice | currency:'INR'}}</h4>
+            </div>
+            <a [routerLink]="['/order',fd.id]"> <button class="bt">Order Now</button></a>
+        </div>
+    </div>
+    <div class="sm">
+    <a class="show-more">Show More <i class="fa-sharp fa-solid fa-arrow-right-long right-arrow"></i></a>
+</div>
+</div>
+
+    <div class="title">
+        <img src="assets/images/Pizzapics/veglogo.png" class="veglogo">
+    </div>
+        <span class="hr1 hr2"></span>
+
+        <div class="gridbox">
+            <div class="column"  *ngFor="let fd of VFoodData, index as i">
+            <div class="c1" *ngIf="i<4">
+                <div class="img-cont">
+                    <img src="{{fd.foodImg}}">
+                </div>
+                <div class="text">
+                    <h1>{{fd.foodName}}</h1>
+                    <p>{{fd.foodDetails}}</p>
+                    <h4>{{fd.foodPrice | currency:'INR'}}</h4>
+                </div>
+                <a [routerLink]="['/opveg',fd.id]"><button class="bt bt2">Order Now</button></a>
+            </div>
+        </div> 
+        <div class="sm">
+            <a class="show-more sm2" >Show More <i class="fa-sharp fa-solid fa-arrow-right-long right-arrow ra"></i></a>
+        </div>   
+    </div>
+
+
+</div>  
+</section>
