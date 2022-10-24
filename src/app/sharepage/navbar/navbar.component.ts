@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/trans/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public totalitem:number = 0
+
+  constructor(private cartsrv:CartService) { }
+
   n:any
   in:any
+
   ngOnInit(): void {
     this.n = localStorage.getItem('nam')
+
+    this.cartsrv.getProduct().subscribe(res => {
+      this.totalitem = res.length
+    })
   }
  
   a:any

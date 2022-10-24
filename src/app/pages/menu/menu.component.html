@@ -25,10 +25,10 @@
     </div>  
 
     <div class="lists">
-        <div class="l-1"  *ngFor="let fd of foodData">
+        <div class="l-1" *ngFor="let fd of nonveg">
            <div class="p-info">
-           <a [routerLink]="['/order',fd.id]"><h5>{{fd.foodName}}</h5>
-            <p>({{fd.foodDetails}})</p></a>
+           <a [routerLink]="['/order',fd._id]"><h5>{{fd.foodname}}</h5>
+            <p>({{fd.fooddetails}})</p></a>
         </div>
 
         <div class="prices-row">
@@ -40,8 +40,9 @@
                 <th>{{fd.s4}}</th>
             </tr>
         </table>
-         </div>
-        </div>
+             </div>
+            </div>
+       
     </div>
 
 </div>
@@ -74,10 +75,10 @@
     </div>
 
     <div class="lists">
-        <div class="l-1 l-2"  *ngFor="let fd of foodData2">
+        <div class="l-1 l-2"  *ngFor="let fd of veg">
            <div class="p-info">
-           <a [routerLink]="['/opveg',fd.id]"><h5>{{fd.foodName}}</h5>
-            <p>({{fd.foodDetails}})</p></a>
+           <a [routerLink]="['/order',fd._id]"><h5>{{fd.foodname}}</h5>
+            <p>({{fd.fooddetails}})</p></a>
         </div>
 
         <div class="prices-row">

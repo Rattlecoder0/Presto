@@ -8,12 +8,12 @@ export class TransService {
 
   constructor(private http:HttpClient) { }
 
-  data = 'http://localhost:3000/getData'
+  signupData = 'http://localhost:3000/getData'
+  menuData = 'http://localhost:3000/getmenuData'
 
   onGetData(){
     return this.http.get('http://localhost:3000/getData')
   }
-
 
   // Post Api
 
@@ -35,5 +35,14 @@ export class TransService {
     return this.http.put(`${this.updateurl}/${id}`,formData)
   }
 
+// Menu Data
+
+onGetMenu(){
+  return this.http.get('http://localhost:3000/menu/getmenudata')
+}
+
+searchmenu(id:any){
+  return this.http.get(`http://localhost:3000/menuRout/${id}`)
+}
 
 }

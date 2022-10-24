@@ -1,0 +1,10 @@
+> node -v 
+> npm -v
+> npm init
+> npm i -g nodemon
+
+
+-------mongodb atlas--------
+
+> npm install mongod
+> npm intall mongoose

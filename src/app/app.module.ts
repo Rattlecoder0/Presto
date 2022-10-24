@@ -14,7 +14,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NavbarComponent } from './sharepage/navbar/navbar.component';
 import { FooterComponent } from './sharepage/footer/footer.component';
 import { OrderpageComponent } from './pages/orderpage/orderpage.component';
-import { OpvegComponent } from './pages/opveg/opveg.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { OpvegComponent } from './pages/opveg/opveg.component';
     NavbarComponent,
     FooterComponent,
     OrderpageComponent,
-    OpvegComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

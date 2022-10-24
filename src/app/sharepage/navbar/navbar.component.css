@@ -1,12 +1,12 @@
 
 /* -----first navbar------- */
 .nav-first{
-    background-color: black;
+    background-color: rgba(19, 17, 17, 0.972);
     color: white;
     display: flex;
     height: 40px;
     justify-content: center;
-   
+
 }
 .nf-cont{
     width: 90%;
@@ -109,7 +109,12 @@
         padding: 8px;
     }
 }
-
+@media(max-width:330px){
+    .nav-first{
+        display: none;
+        
+    }
+}
 
 
 /* ---------main navbar----------- */
@@ -120,7 +125,8 @@
     align-items: center;
     height: 100px;
     background-color: white;
-
+    box-shadow: 0 2px 15px rgba(67, 65, 65, 0.421);
+    z-index: 10;
 }
 .nav-cont{
     width: 90%;
@@ -224,11 +230,25 @@ nav ul li a.active-link::after{
 .fa-user{
     font-size: 20px;
     color: black;  
-    margin-left: 10px;  
+    margin-left: 5px;  
+}
+.btn-cart{
+    font-size: 19px;
+    border: none;
+    background: transparent;
+    position: relative;
+    margin-left: 10px;
 
 }
-
-
+.badge{
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    color: black;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    font-size: 10px;
+}
 
 
 @media(max-width:1735px){
@@ -414,9 +434,4 @@ nav ul li a.active-link::after{
    }
 }
 
-@media(max-width:300px){
-    .nav-first{
-        display: none;
-        
-    }
-}
+

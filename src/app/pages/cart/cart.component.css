@@ -1,0 +1,106 @@
+.cont{
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.outbox{
+   width: 80%;
+    position: relative;
+    padding-top: 1vh;
+    padding-bottom: 7vh;
+    outline: 1px solid;
+}
+
+.text{
+    display: inline-block;
+    margin-left: 3vh;
+    margin-top: 1vh;
+}
+.text h3{
+    color: red;
+ 
+}
+
+.outbox .imeg{
+    display: flex;
+    justify-content: center;
+ }
+
+.cart-girl{
+    width: 450px;
+}
+
+.title-1{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    color: rgb(137, 163, 179);
+}
+.add-some{
+    font-size: 18px;
+}
+
+.outbox .title-btn{
+    display: flex;
+    justify-content: center;
+}
+.tb-cont{
+    text-align: center;
+}
+
+@media(max-width:600px){
+    .imeg{
+        margin-top: 2vh;
+    }
+    .cart-girl{
+        width: 250px;
+    }
+    .title-1{
+        font-size: 30px;
+    }
+    .add-some{
+        font-size: 15px;
+    }
+    .outbox{
+         padding-top: 2vh;
+         padding-bottom: 10vh;
+     }
+     .title-btn{
+        margin-top: 3vh;
+     }
+}
+
+@media(max-width:375px){
+    .outbox{
+        width: 94%;
+    }
+}
+
+
+/* Table Data */
+
+.del{
+    background-color: rgba(255, 41, 41, 0.923);
+    color: white;
+}
+
+.card-table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* min-width: none; */
+    word-wrap: break-word;
+    width: 80%;
+    background-clip: border-box;
+    outline: 1px solid;
+    border-radius: .25rem;
+}
+.btn-danger{
+    margin-right: 10px;
+}
+.btn-primary{
+    margin-right: 10px;
+}

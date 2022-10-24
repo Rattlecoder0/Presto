@@ -1,13 +1,13 @@
 .MENU{
     display: flex;
     justify-content: center;
-    height: 85vh;
-    margin-top: 5vh;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
 }
 .onlyveg{
     display: flex;
     justify-content: center;
-    height: 85vh;
+    margin-bottom: 15vh;
 }
 .nonveg-cont{
     width: 90%;

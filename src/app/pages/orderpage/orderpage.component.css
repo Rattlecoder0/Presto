@@ -12,13 +12,14 @@
 
 .box{
     position: relative;
-    width: 60%;
+    width: 800px;
 }
 .box-cont{
     width: 100%;
     border: 2px solid;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    overflow: hidden;
 }
 
 .image img{
@@ -42,35 +43,46 @@
 
 
 .size{
-    margin-top: 6vh;
+    margin-top: 5vh;
     position: relative;
 }
-.size h1{
-    font-size: 25px;
+
+.sline-div{
+    position: relative;
     margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    height: 32px;
+}
+.sline-div h1{
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    z-index: 1;
+    width: 150px;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .ss-sideline{
     position: absolute;
-    display: block;
     background-color: rgb(19, 16, 16);
     height: 2px;
-    width: 30%;
-    top: 15px;
-    left: 90px;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.ss-sideline2{
-    position: absolute;
-    display: block;
-    background-color: rgb(19, 16, 16);
-    height: 2px;
-    width: 30%;
-    top: 15px;
-    right: 90px;
-}
+
 .sizes-cont{
     display: flex;
     justify-content: center;
+  
+}
+.sizes-cont input,label{
+    cursor: pointer;
 }
 .s{
     margin-right: 20px;
@@ -110,75 +122,36 @@ form{
 }
 
 .butt{
-    padding: 10px 0;
+    width: 100%;
     margin-top: 2vh;
+    border-radius: 0;
     transition: .3s;
+    padding: 15px 0;
     border: none;
 }
 .butt:hover{
-    background-color: red;
+    background-color: var(--primary-color);
 }
 
-@media(max-width: 1650px){
-    .detail h1{
-        font-size: 2.5vw;
-    }
-    .detail p{
-        font-size: 1.1vw;
-    }
-    .detail h5{
-        font-size: 1.4vw;
-    }
-    form{
-        width: 100%;
-    }
-}
-@media(max-width: 992px){
-    .box{
-        width: 100%;
-    }
-    .detail h1{
-        font-size: 3vw;
-    }
-    .detail p{
-        font-size: 1.5vw;
-    }
-    .detail h5{
-        font-size: 1.9vw;
-    }
-}
 @media(max-width: 780px){
     .sizes-cont{
     flex-direction: column;
+    margin-left: 2vw;
     }
     .s{
         margin-bottom: 10px;
     }
 }
 @media(max-width:600px){
-    .detail h1{
-        font-size: 5vw;
+    .order-cont{
+        width: 90%;
     }
-    .detail p{
-        font-size: 2.2vw;
-    }
-    .detail h5{
-        font-size: 2.8vw;
+    .sline-div h1{
+        font-size: 20px;
+        width: 120px;
     }
 }
 @media(max-width:420px){
-    .order-cont{
-        width: 95%;
-    }
-    .detail h1{
-        font-size: 6vw;
-    }
-    .detail p{
-        font-size: 3.2vw;
-    }
-    .detail h5{
-        font-size: 5vw;
-    }
     .ff label{
         font-size: 17px;
     }

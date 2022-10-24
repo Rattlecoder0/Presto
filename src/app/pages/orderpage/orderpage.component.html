@@ -1,52 +1,56 @@
 <section class="orderpage">
     <div class="order-cont">
 
-        <div class="box" *ngIf="nvmenuData">
+        <div class="box" *ngIf="getvalue">
             <div class="box-cont">
 
             <div class="image">
-                <img src="{{nvmenuData[0].foodImg}}">
+                <img src="{{getvalue[0].foodimg}}">
             </div>
 
             <div class="detail">
-                <h1>{{nvmenuData[0].foodName}}</h1>
-                <p>{{nvmenuData[0].foodDetails}}</p>
-                <h5>{{nvmenuData[0].s1 | currency : 'INR'}} <span>Serves1</span></h5>
+                <h1>{{getvalue[0].foodname}}</h1>
+                <p>{{getvalue[0].fooddetails}}</p>
+                <div *ngIf="serves==0">
+                    <h5>{{getvalue[0].s1 | currency : 'INR'}} <span>Serves1</span></h5>
+                </div>
+                <div *ngIf="serves!='' ">
+                    <h5>{{serves | currency : 'INR'}} 
+                    <span *ngIf="serves==getvalue[0].s1">Serves1</span>
+                    <span *ngIf="serves==getvalue[0].s2">Serves2</span>
+                    <span *ngIf="serves==getvalue[0].s3">Serves3</span>
+                    <span *ngIf="serves==getvalue[0].s4">Serves4</span>
+                    </h5>
+                </div>
             </div>
 
             <div class="size">
-                <span class="ss-sideline"></span><h1>Select Size</h1><span class="ss-sideline2"></span>
+
+                <div class="sline-div">
+                <span class="ss-sideline"></span>
+                <h1>Select Size</h1>
+                <!-- <span class="ss-sideline2"></span> -->
+            </div>
+
             <div class="sizes-cont">
-            <div class="s1 s">
+            <div class="s1 s" (click)="show('s1')">
                 <input type="radio" name="serve1" class="radio"><label for="serve1">Monster Slice</label>
             </div>
-            <div class="s2 s">
+            <div class="s2 s" (click)="show('s2')">
                 <input type="radio" name="serve1" class="radio"><label for="serve1">9" Round</label>
             </div>
-            <div class="s3 s">
+            <div class="s3 s" (click)="show('s3')">
                 <input type="radio" name="serve1" class="radio"><label for="serve1">9" Blast</label>
             </div>
-            <div class="s4 s">
-                <input type="radio" name="serve1" class="radio"><label for="serve1">14" Round</label>
+            <div class="s4 s" (click)="show('s4')">
+                <input type="radio" name="serve1" class="radio"><label for="" >14" Round</label>
             </div>
         </div>
     </div>
 
    
     <div class="form-cont">
-        <form>
-                <div class="nn ff">
-                <label for="name">Enter Your Name</label>
-            <input type="text" name="name">
-        </div>
-        <div class="mob ff">
-            <label for="mob">Mobile Number</label>
-            <input type="number" name="mob">
-        </div>
-
-        <button class="btn btn-dark butt">ORDER</button>
-
-    </form>
+    <button class="btn btn-dark butt" (click)="addtocart(getvalue)">ADD TO CART</button>
 </div>
 
 </div>

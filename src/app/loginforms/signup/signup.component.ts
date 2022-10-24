@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
 
   confirmpass: string = 'none'
  
-  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router:Router, private trans:TransService) { }
+  constructor(private http : HttpClient, private router:Router, private trans:TransService) { }
 
 
   ngOnInit(): void {
@@ -64,28 +64,30 @@ export class SignupComponent implements OnInit {
 
   signUp(){
     if(this.Password.value == this.ConfirmPassword.value){
-      this.http.post<any>("http://localhost:3000/signupUsers",this.registerForm.value)
-      .subscribe(res=>{
-        alert("Signup Successfull");
-        this.registerForm.reset();
-        this.router.navigate(['login'])
-      },err=>{
-        alert("Something went wrong")
-      })
-      this.confirmpass = 'none'
-    }
-      // mogodb
-    //   this.trans.addUserDetails(this.registerForm.value).subscribe((user)=>{
-    //     console.log(user)
+      //Json Server
+    //   this.http.post<any>("http://localhost:3000/signupUsers",this.registerForm.value)
+    //   .subscribe(res=>{
     //     alert("Signup Successfull");
     //     this.registerForm.reset();
     //     this.router.navigate(['login'])
     //   },err=>{
-    //       alert("Something went wrong")
-    //     })
+    //     alert("Something went wrong")
+    //   })
     //   this.confirmpass = 'none'
-
     // }
+
+      // mongodb
+      this.trans.addUserDetails(this.registerForm.value).subscribe((user)=>{
+        console.log(user)
+        alert("Signup Successfull");
+        this.registerForm.reset();
+        this.router.navigate(['login'])
+      },err=>{
+          alert("Something went wrong")
+        })
+      this.confirmpass = 'none'
+
+    }
     else{
       this.confirmpass = "inline"
     }

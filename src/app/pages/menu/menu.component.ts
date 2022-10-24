@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderDetailsService } from 'src/app/order-details.service';
-
+import { TransService } from 'src/app/trans/trans.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,14 +8,31 @@ import { OrderDetailsService } from 'src/app/order-details.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private service:OrderDetailsService) { }
+  constructor(private service:TransService) { }
 
-  foodData:any
-  foodData2:any
+  nonveg:any=[]
+  veg:any=[]
+
+  Mdata:any 
   ngOnInit(): void {
-    this.foodData = this.service.NonVegFoodDetails;
-    this.foodData2 = this.service.VegFoodDetails;
+    this.service.onGetMenu().subscribe((res)=>{
+      this.Mdata = res
+
+      for(let data of this.Mdata){
+        if(data.type=='nonveg'){
+          this.nonveg.push(data)
+        }
+        else{
+          this.veg.push(data)
+        }
+      }
+    })
+
+
   }
+
+
+
 
 
 }

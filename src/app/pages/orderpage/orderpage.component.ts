@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { OrderDetailsService } from 'src/app/order-details.service';
+import { CartService } from 'src/app/trans/cart.service';
+import { TransService } from 'src/app/trans/trans.service';
 
 @Component({
   selector: 'app-orderpage',
@@ -9,19 +10,56 @@ import { OrderDetailsService } from 'src/app/order-details.service';
 })
 export class OrderpageComponent implements OnInit {
 
-  constructor(private param:ActivatedRoute, private service:OrderDetailsService) { }
+  constructor(private param:ActivatedRoute, private service:TransService, private cartserv:CartService) { }
 
-  getMenuId:any
+
   nvmenuData:any
-
+  getvalue:any
+  itemlist:any
+  serves:any=0
   ngOnInit(): void {
-    this.getMenuId = this.param.snapshot.paramMap.get('id')
-    console.log(this.getMenuId,'getmenu')
-   if(this.getMenuId){
-      this.nvmenuData = this.service.NonVegFoodDetails.filter((value)=>{
-           return value.id == this.getMenuId
-         })
-       }
+    this.param.params.subscribe((fdata)=>{
+      this.nvmenuData = fdata['id']
+    })
+    console.log(this.nvmenuData)
+
+    this.service.searchmenu(this.nvmenuData).subscribe((data) =>{
+      this.getvalue = data
+    //  console.log(this.getvalue)
+
+    
+    })
+
+
+    //addtocart
+    this.service.onGetMenu().subscribe(res => {
+      this.itemlist = res
+      this.itemlist.forEach((a:any) => {
+        Object.assign(a,{quantity:1,total:a.price})
+      });
+    })
+
   }
+
+  show(val:any){
+    if(val == 's1'){
+      this.serves = this.getvalue[0].s1
+    }
+    else if(val == 's2'){
+      this.serves = this.getvalue[0].s2
+    }
+    else if(val == 's3'){
+      this.serves = this.getvalue[0].s3
+    }
+    else if(val == 's4'){
+      this.serves = this.getvalue[0].s4
+    }
+  
+  }
+
+  addtocart(getvalue:any){
+    this.cartserv.addtoCart(getvalue)
+  }
+
 
 }

@@ -1,13 +1,14 @@
 .about{
     display: flex;
     justify-content: center;
+    margin-top: 8vh;
 }
 .abt-cont{
     width: 70%;
-    padding-top: 10vh;
+    margin-bottom: 20vh;
 }
 .in-content{
-    margin-bottom: 30vh;
+    text-align: justify;
 }
 
 .hed-txt{
