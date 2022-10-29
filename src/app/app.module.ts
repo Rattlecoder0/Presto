@@ -28,13 +28,14 @@ import { CartComponent } from './pages/cart/cart.component';
     NavbarComponent,
     FooterComponent,
     OrderpageComponent,
-    CartComponent,
+    CartComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

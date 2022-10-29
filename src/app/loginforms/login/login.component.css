@@ -1,14 +1,21 @@
 .formcont{
     height: 80vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color:aliceblue;
+}
+.con-cont{
+    display: flex;
+    justify-content: center;
 }
 .itsform{
     width: 600px;
     border: 5px solid var(--primary-color);
     border-radius: 5px;
     padding: 15px;
+    margin: 0 1vh;
+    height: fit-content;
 }
 
 .email{
@@ -48,7 +55,6 @@
     background-color: var(--primary-color);
 }
 
-
 .rm-fp-cont{
     display: flex;
     justify-content: space-between;
@@ -81,4 +87,18 @@
 }
 .s-up{
     font-size: 14px;
+}
+
+@media(max-width:380px){
+    .rm-fp-cont{
+    flex-direction: column;
+    text-align: center;    
+}
+.rm{
+    display: block;
+    width: 100%;
+}
+.fp-cont{
+    width: 100%;
+}
 }

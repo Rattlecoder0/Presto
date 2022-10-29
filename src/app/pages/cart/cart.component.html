@@ -1,4 +1,4 @@
-<ng-container *ngIf="Product.length !=0">
+<ng-container *ngIf="cardlist.length !=0">
     <div class="cont">
         <div class="card-table">
             <div class="card-items">
@@ -6,20 +6,18 @@
                     <thead>
                     <tr>
                         <th>Sr.No</th>
-                        <th>Pizza</th>
-                        <th>Size</th>
+                        <th>Pizza</th>                 
                         <th>Quantity</th>
-                        <th>Total Price</th>
+                        <th>Price</th>
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr *ngFor="let item of Product; let i = index">
+                <tbody *ngFor="let data of cardlist; let i = index">
+                        <tr *ngFor="let item of data ">
                         <td>{{i+1}}</td>
                         <td>{{item.foodname}}</td>
-                        <td>{{item.serves}}"</td>
-                        <td>{{item.price}}</td>
-                        <td>{{item.total}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{price[i] | currency:('INR') }}</td>
                         <td>
                             <div class="action-btn">
                                 <button (click)="removeitem(item)" class="del btn
@@ -27,21 +25,21 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                        <td>Grand Total: ${{grandTotal}}</td>
-                        <td><button class="btn btn-danger" (click)="emptycart()">Empty Cart</button>
-                        <button class="btn btn-primary" routerLink="/">Shop More</button>
-                        <button class="btn btn-dark">Order</button></td>
-                    </tr>
                 </tbody>
+                <tr>
+                    <td colspan="3"></td>
+                    <td>Grand Total: ${{grandTotal}}</td>
+                    <td><button class="btn emptycart" (click)="emptycart()">Empty Cart</button>
+                    <button class="btn shop-more" routerLink="/">Shop More</button>
+                    <button class="btn order">Order</button></td>
+                </tr>
                 </table>
             </div>
         </div>     
     </div>
 </ng-container>
 
-<ng-container *ngIf="Product.length == 0">
+<ng-container *ngIf="cardlist.length == 0">
     <div class="cont">
 
         <div class="outbox">

@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
 
   }
 
-
   showmore(){
     this.sm =! this.sm
   }

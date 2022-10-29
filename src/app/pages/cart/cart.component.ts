@@ -8,9 +8,10 @@ import { CartService } from 'src/app/trans/cart.service';
 })
 export class CartComponent implements OnInit {
 
- public Product : any = []
+  public Product : any = []
   public grandTotal !: number
-
+  cardlist:any
+  price:any
   constructor(private cartsrv:CartService) { }
 
   ngOnInit(): void {
@@ -18,6 +19,9 @@ export class CartComponent implements OnInit {
       this.Product = res
       this.grandTotal = this.cartsrv.getTotalPrice()
     })
+    this.cardlist=this.cartsrv.cartItemList
+    this.price= this.cartsrv.cartItempr
+    // console.log(this.cardlist)
   }
 
   removeitem(item:any){
@@ -28,8 +32,8 @@ export class CartComponent implements OnInit {
     this.cartsrv.removeAllCart()
   }
 
-  removeall(){
-    this.cartsrv.removeAllCart()
-  }
+  // removeall(){
+  //   this.cartsrv.removeAllCart()
+  // }
 
 }

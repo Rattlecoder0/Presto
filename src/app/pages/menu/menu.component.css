@@ -44,10 +44,6 @@ table{
 }
 table tr th{
     width: 9vw;
-    font-size: 16px;
-}
-table tr td{
-    font-size: 15px;
 }
 .nv-red th{
     color: red;
@@ -64,7 +60,6 @@ table tr td{
     height: 60px;
 }
 .p-info{
-    
     position: absolute;
     top: 50%;
     left: 1%;
@@ -97,10 +92,11 @@ table tr td{
     color: green;
 }
 
+.alert{
+    display: none;
+}
+
 @media(max-width:1380px){
-    .MENU,.onlyveg{
-        height: 100vh;
-    }
     .p-info{ 
         top: 50%;
         left: 1%;
@@ -116,7 +112,50 @@ table tr td{
         height: 70px;
     }
 }
-@media(max-width:1080px){
-   
-
+@media(max-width:1000px){
+    .nv-red th,.v-green th{
+       font-size: 14px;
+    }
+    .nv-serves,.v-serves{
+        font-size: 12px;
+    }
+    .prices-row th{
+        font-size: 13px;
+    }
+    .p-info h5{
+        font-size: 15px;
+    }
+    .p-info a p{
+        font-size: 12px;
+    }
+    table tr th{
+        width: 10vw;
+    }
 }
+@media(max-width:730px){
+    .p-info a p{
+        display: none;
+    }
+    .head{
+        height: 100px;
+    }
+}
+@media(max-width:550px){
+    .MENU,.onlyveg{
+        display: none;
+    }
+    .alert{
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .alert h1{
+        font-size: 20px;
+        text-align: center;
+        color: red;
+    }
+}
+
+

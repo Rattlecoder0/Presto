@@ -54,9 +54,9 @@
 
         <div class="gridbox">
             <div class="column"  *ngFor="let fd of veg, index as i">
-            <div class="c1" *ngIf="i<4 == sm ">
+            <div class="c1" *ngIf="i<4 == sm">
                 <div class="img-cont">
-                    <img src={{fd.foodimage}}>
+                    <img [src]="fd.foodimg">
                 </div>
                 <div class="text">
                     <h1>{{fd.foodname}}</h1>

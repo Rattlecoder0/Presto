@@ -1,7 +1,8 @@
 .formcont{
     height: 80vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color:aliceblue;
 }
 .itsform{
@@ -9,8 +10,13 @@
     border: 5px solid var(--primary-color);
     border-radius: 5px;
     padding: 20px;
+    margin: 0 1vh;
     display: flex;
     flex-direction: column;
+}
+.con-cont{
+    display: flex;
+    justify-content: center;
 }
 .hedtxt{
     font-size: 35px;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, FormControl, NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from 'src/app/trans/cart.service';
 import { TransService } from 'src/app/trans/trans.service';
@@ -10,13 +11,13 @@ import { TransService } from 'src/app/trans/trans.service';
 })
 export class OrderpageComponent implements OnInit {
 
-  constructor(private param:ActivatedRoute, private service:TransService, private cartserv:CartService) { }
-
+  constructor(private param:ActivatedRoute, private service:TransService, private cartserv:CartService, private fb: FormBuilder) { }
 
   nvmenuData:any
   getvalue:any
   itemlist:any
   serves:any=0
+
   ngOnInit(): void {
     this.param.params.subscribe((fdata)=>{
       this.nvmenuData = fdata['id']
@@ -25,22 +26,20 @@ export class OrderpageComponent implements OnInit {
 
     this.service.searchmenu(this.nvmenuData).subscribe((data) =>{
       this.getvalue = data
-    //  console.log(this.getvalue)
-
-    
-    })
-
-
-    //addtocart
-    this.service.onGetMenu().subscribe(res => {
-      this.itemlist = res
-      this.itemlist.forEach((a:any) => {
+      this.getvalue.forEach((a:any) => {
         Object.assign(a,{quantity:1,total:a.price})
       });
     })
 
   }
 
+  // Radio Form 
+  radioForm = this.fb.group({
+    ser1: ['serve1']
+  })
+
+
+  // Show Prices
   show(val:any){
     if(val == 's1'){
       this.serves = this.getvalue[0].s1
@@ -58,7 +57,9 @@ export class OrderpageComponent implements OnInit {
   }
 
   addtocart(getvalue:any){
-    this.cartserv.addtoCart(getvalue)
+    console.log(this.radioForm.value)
+    this.cartserv.addtoCart(getvalue,this.radioForm.value)
+    alert('Added To Cart')
   }
 
 

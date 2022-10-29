@@ -4,7 +4,6 @@ const cors = require('cors');
 var app = express();
 app.use(cors());
 
-
 var bodyparser = require('body-parser')
 var jsonparser = bodyparser.json()
 
@@ -19,7 +18,8 @@ const mongoose = require('mongoose');
 
 mongoose.connect("mongodb+srv://ubaid:ubaidmongo@cluster0.tydgi75.mongodb.net/Registered?retryWrites=true&w=majority", {
     useNewUrlParser:true, useUnifiedTopology:true,
-}).then(()=>{console.log('Mongodb Atlas connection establish')
+}).then(()=>{
+    console.log('Mongodb Atlas connection establish')
 }).catch((err)=>{
     console.log(err)
 })
@@ -117,3 +117,4 @@ app.get('/menuRout/:id', jsonparser, (req,res) => {
 app.listen(3000, ()=>{
     console.log("server is running")
 });
+

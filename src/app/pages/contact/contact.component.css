@@ -4,7 +4,7 @@
     height: 90vh;
 }
 .con-cont{
-    width: 70%;
+    width: 92%;
     display: flex;
     justify-content: center;
     padding-top: 10vh;
@@ -106,7 +106,3 @@ textarea:focus ~ .f-label,
     border: none;
     background-color: rgb(0, 214, 242);
 }
-/* .butt:hover{
-    background-color: rgb(0, 214, 242);
-    color: rgb(20, 17, 17);
-} */

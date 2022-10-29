@@ -90,17 +90,39 @@
 .card-table{
     position: relative;
     display: flex;
+    text-align: center; 
     flex-direction: column;
-    /* min-width: none; */
     word-wrap: break-word;
     width: 80%;
     background-clip: border-box;
     outline: 1px solid;
     border-radius: .25rem;
 }
-.btn-danger{
+.btn{
     margin-right: 10px;
+
 }
-.btn-primary{
-    margin-right: 10px;
+.shop-more{
+    background-color: rgb(6, 184, 255);
+    color: white;
+    transition: .3s;
+}
+.shop-more:hover{
+    background-color: rgb(0, 134, 186);
+}
+.emptycart{
+    background-color: rgb(255, 74, 74);
+    color: white;
+    transition: .3s;
+}
+.emptycart:hover{
+    background-color: rgb(223, 0, 0);
+}
+.order{
+    background-color: rgb(0, 185, 0);
+    color: white;
+    transition: .3s;
+}
+.order:hover{
+    background-color: rgb(0, 131, 0);
 }

@@ -26,36 +26,39 @@
 
             <div class="size">
 
-                <div class="sline-div">
+            <div class="sline-div">
                 <span class="ss-sideline"></span>
                 <h1>Select Size</h1>
-                <!-- <span class="ss-sideline2"></span> -->
             </div>
 
-            <div class="sizes-cont">
+            <form [formGroup]="radioForm">
+
+        <div class="sizes-cont">
             <div class="s1 s" (click)="show('s1')">
-                <input type="radio" name="serve1" class="radio"><label for="serve1">Monster Slice</label>
+                <input type="radio" formControlName="ser1" id="serve1" name="ser1" [value]="getvalue[0].s1" class="radio"><label for="serve1">Monster Slice</label>
             </div>
             <div class="s2 s" (click)="show('s2')">
-                <input type="radio" name="serve1" class="radio"><label for="serve1">9" Round</label>
+                <input type="radio" formControlName="ser1" id="serve2" name="ser1" [value]="getvalue[0].s2" class="radio"><label for="serve2">9" Round</label>
             </div>
             <div class="s3 s" (click)="show('s3')">
-                <input type="radio" name="serve1" class="radio"><label for="serve1">9" Blast</label>
+                <input type="radio" formControlName="ser1" id="serve3" name="ser1" [value]="getvalue[0].s3" class="radio"><label for="serve3">9" Blast</label>
             </div>
             <div class="s4 s" (click)="show('s4')">
-                <input type="radio" name="serve1" class="radio"><label for="" >14" Round</label>
+                <input type="radio" formControlName="ser1" id="serve4" name="ser1" [value]="getvalue[0].s4" class="radio"><label for="serve4" >14" Round</label>
             </div>
-        </div>
     </div>
 
-   
     <div class="form-cont">
-    <button class="btn btn-dark butt" (click)="addtocart(getvalue)">ADD TO CART</button>
-</div>
+        <button class="btn btn-dark butt" type="submit" (click)="addtocart(getvalue)">ADD TO CART</button>
+    </div>
+
+    </form>
+    </div>
+
+
 
 </div>
   </div>
-
 
     </div>
 </section>
